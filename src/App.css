@@ -1,0 +1,99 @@
+body {
+  /*background: url(https://media1.tenor.com/m/D8N2aMZtd4YAAAAC/rain.gif);*/
+  background: url(https://www.colorhexa.com/e6e9ec.png);
+  background-color: #364659;
+  min-height: 100vh;    /*화면 높이의 100%*/
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.weather-box {
+  border: 3px solid #111C26;
+  border-radius: 20px;
+  background-color: #111C26;
+  padding: 50px;
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin: 5px;
+  background-color: hsl(209, 100%, 54%);
+}
+
+.button:hover{
+  margin: 5px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.select {
+  width: 200px;
+  height: 50px;
+  background-color: #B4BDC8;
+  color: #232B36;
+}
+
+.select option {
+  background-color: #B4BDC8;
+  color: #232B36;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+}
+
+.smalltext {
+  font-size: 15px;
+}
+
+.citytext {
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  color: rgb(51, 51, 51);
+}
+
+.locationtext{
+  border: 3px solid hsla(0, 0%, 100%, 0.527);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px;
+  color: black;
+  font-size: 20px;
+  background-color: hsla(0, 0%, 100%, 0.527);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.moretext{
+  font-size: 15px;
+}
