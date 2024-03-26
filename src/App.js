@@ -17,7 +17,7 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
-  const cities = ['Paris', 'New York', 'Busan', 'Seoul', 'Tokyo', 'Kyoto'];
+  const cities = ['Paris', 'New York', 'Busan', 'Seoul', 'Tokyo', 'Kyoto', 'Jakarta', 'Abu Dhabi', 'Ankara', 'Beijing', 'Bangkok', 'Cairo', 'Cape Town', 'Dallas', 'Doha', 'Fukuoka', 'Rome', 'Singapore', 'Sydney', 'Auckland'];
   const api_key = process.env.REACT_APP_API_KEY;
   console.log("test", api_key);
 
@@ -77,7 +77,15 @@ function App() {
   }, [city]); // array에 아무 것도 없으면 componentDidMount, // city state를 주시하다가 city가 바뀌면 호출해줌
 
   return (
-    <div className='main'>
+    <div className='main' style={
+      weather
+        ? {
+          backgroundImage: `url(/images/bg-${weather?.weather[0]?.main}.jpg)`
+        }
+        : {
+          background: `url(https://www.colorhexa.com/e6e9ec.png)`
+        }
+    }>
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap')
       </style>
