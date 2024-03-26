@@ -13,7 +13,7 @@ const WeatherButton = ({ cities, setCity, city }) => {
     }
 
     const selectedOk = () => {
-        setCity(inputCity);    /*버튼을 클릭하면 city 설정*/
+        setCity(inputCity)    /*버튼을 클릭하면 city 설정*/
     }
 
     return (

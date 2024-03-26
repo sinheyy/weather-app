@@ -37,11 +37,18 @@ function App() {
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric`;
       setLoading(true);
       let response = await fetch(url);    // await 쓰려면 함수가 async 처리해야 함
-      let data = await response.json();
-      //console.log("data", data);
 
-      setWeather(data);
-      setLoading(false);
+      if (!response.ok) {
+        alert("위치 확인해주세요");
+        setLoading(false);
+      }
+      else {
+        let data = await response.json();
+
+        setWeather(data);
+        setLoading(false);
+      }
+
     } catch (err) {
       console.error(err);
       setLoading(false);
@@ -54,16 +61,23 @@ function App() {
       let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric`;
       setLoading(true);
       let response = await fetch(url);    // await 쓰려면 함수가 async 처리해야 함
-      let data = await response.json();
-      console.log("data", data);
 
-      setWeather(data);
-      setLoading(false);
+      if (!response.ok) {
+        alert("다시 입력해주세요");
+        setLoading(false);
+      }
+      else {
+        let data = await response.json();
+        console.log("data", data);
+
+        setWeather(data);
+        setLoading(false);
+      }
+
     } catch (err) {
       console.error(err);
       setLoading(false);
     }
-
   }
 
   useEffect(() => {
