@@ -19,7 +19,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const cities = ['Paris', 'New York', 'Busan', 'Seoul', 'Tokyo', 'Kyoto', 'Jakarta', 'Abu Dhabi', 'Ankara', 'Beijing', 'Bangkok', 'Cairo', 'Cape Town', 'Dallas', 'Doha', 'Fukuoka', 'Rome', 'Singapore', 'Sydney', 'Auckland'];
   const api_key = process.env.REACT_APP_API_KEY;
-  console.log("test", api_key);
 
   // 현재 위치 얻기
   const getCurrentLocation = () => {

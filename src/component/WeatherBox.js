@@ -5,12 +5,10 @@ const WeatherBox = ({ weather }) => {
 
     const weatherIcon = weather?.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
-    console.log("url: ", iconUrl);
 
     // 현재 날짜와 시간
     const date = new Date();
     const now = date.toLocaleString("ko-KR");
-    console.log("now", now);
 
 
     return (
